@@ -1,6 +1,5 @@
-// Let length[i] be the desired length of row i of a two-dimensional array. 
-// Write a function similar to make2dArray() to create a two-dimensional array 
-// such that row i has length[i] elements.
+// Minseo Kim
+// 2021312602
 
 #include <stdio.h>
 #include <stdlib.h>
