@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- SHOW SUB LAYOUT 버튼 -->
+    <Button
+        android:id="@+id/buttonShowSubLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SHOW SUB LAYOUT"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 미리 공간을 확보할 ImageView (처음에는 빈 상태로 둠) -->
+    <LinearLayout
+        android:id="@+id/subLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/buttonShowSubLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 미리 공간을 확보한 ImageView -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+        android:contentDescription="Image Placeholder" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:contentDescription="Image Placeholder" />
+    </LinearLayout>
+
+    <!-- 피자, 치킨, 햄버거 버튼 -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/subLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPizza"
+                android:layout_width="196dp"
+                android:layout_height="wrap_content"
+                android:text="Pizza" />
+
+            <Button
+                android:id="@+id/buttonHamburger"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:text="Hamburger" />
+
+            <Button
+                android:id="@+id/buttonChicken"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:text="Chicken" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- 세부 브랜드 목록 (ListView) -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
