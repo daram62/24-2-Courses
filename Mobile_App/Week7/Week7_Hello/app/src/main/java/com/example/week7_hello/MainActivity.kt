@@ -44,8 +44,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onPause() {
-        super.onPause()
-        finish()
+    override fun onRestart() {
+        super.onRestart()
+
+        val editTextName = findViewById<EditText>(R.id.editTextName)
+        val editTextAge = findViewById<EditText>(R.id.editTextAge)
+
+        editTextName.text.clear()
+        editTextAge.text.clear()
+
     }
 }

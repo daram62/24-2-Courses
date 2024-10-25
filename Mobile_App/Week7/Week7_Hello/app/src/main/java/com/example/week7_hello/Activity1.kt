@@ -37,8 +37,7 @@ class Activity1 : AppCompatActivity() {
         val buttonNo = findViewById<Button>(R.id.buttonNo)
         buttonNo.setOnClickListener {
             // main acitivity로 이동
-            val intent = Intent(this, MainActivity::class.java).apply {}
-            startActivity(intent)
+            finish()
         }
     }
 }
